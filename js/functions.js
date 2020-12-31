@@ -7,6 +7,8 @@
   // Create a canvas
   var canvas = document.createElement('canvas');
   var canvasContext = canvas.getContext('2d');
+  canvas.height = 1500;
+  canvas.width = 1500;
 
   // Create a button that will load the previous image on the canvas when clicked
   var previousButton = document.createElement('button');
