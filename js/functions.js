@@ -42,7 +42,7 @@
    img.src = imageUrls[imageShownIndex];
 
    // Clear the canvas
-   canvasContext.clearRect(0, 0, img.width, img.height);
+   canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
    // After the image has loaded, draw the image on the canvas
    img.onload = function() {
