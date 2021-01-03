@@ -1,57 +1,54 @@
-  // Image URLs
-  var imageUrls = ['./img/1.png', './img/2.png', './img/3.png', './img/4.png', './img/5.png'];
+var slider_img = document.querySelector('.slider-img');
+var images = ['1.png', '2.png', '3.png', '4.png', '5.png'];
+var i = 0;
 
-  // Keep track of the index of the image URL in the array above
-  var imageShownIndex = 0;
+function prev(){
+	if(i <= 0) i = images.length;	
+  i--;
+	return setImg();			 
+}
 
-  // Create a canvas
-  var canvas = document.createElement('canvas');
-  var canvasContext = canvas.getContext('2d');
-  canvas.height = 900;
-  canvas.width = 1500;
+function next(){
+	if(i >= images.length-1) i = -1;
+  i++;
+	return setImg();			 
+}
 
-  // Create a button that will load the previous image on the canvas when clicked
-  var previousButton = document.createElement('button');
-  previousButton.innerHTML = 'Previous Image';
-  previousButton.onclick = function () {
-      // Show images in a cycle, so when you get to the beginning of the array, you loop back to the end
-      imageShownIndex = (imageShownIndex==0) ? imageUrls.length-1 : imageShownIndex-1;
-      updateImage();
-   };
+function prevDialog(){
+  clearDialogue();
+  dialog = dialogList[i],
+  initial = 0;
+  individual = dialogs[initial].split('');
+  createDiag(dialog);				 
+}
 
-  // Do same for the next button
-  var nextButton = document.createElement('button');
-  nextButton.innerHTML = 'Next Image';
-  nextButton.onclick = function () {
-    imageShownIndex = (imageShownIndex == imageUrls.length-1) ? 0 : imageShownIndex+1;
-    updateImage();
-   };
+function nextDialog(){
+  clearDialogue();
+	dialog = dialogList[i],
+  initial = 0;
+  individual = dialogs[initial].split('');
+  createDiag(dialog);				 
+}
 
-  document.body.appendChild(previousButton);
-  document.body.appendChild(canvas);
-  document.body.appendChild(nextButton);
-  
- // Show the first image without requiring a click
- updateImage();
+function clearDialogue() {
+  $("#dialog").text("")
+}
+	
 
- function updateImage() {
-
-   // Create the Image object, using the URL from the array as the source
-   // You could pre-load all the images and store them in the array, rather than loading each image de novo on a click
-   var img = new Image();
-   img.src = imageUrls[imageShownIndex];
-
-   // Clear the canvas
-   canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-
-   // After the image has loaded, draw the image on the canvas
-   img.onload = function() {
-     canvasContext.drawImage(img, 0, 0);
-   }
-
- }
+function setImg(){
+	return slider_img.setAttribute('src', "./img/"+images[i]);
+	
+}
 
  // RPG
+
+ var dialogList = [
+  ["Step 1: Go to the quizlet you want to print."],
+  ["Step 2: Go to the quizlet you want to print."],
+  ["Step 3: Go to the quizlet you want to print."],
+  ["Step 4: Go to the quizlet you want to print."],
+  ["Step 5: Go to the quizlet you want to print."],
+ ]
 
  var dialogs = ["Step 1: Go to the quizlet you want to print."],
     initial = 0;

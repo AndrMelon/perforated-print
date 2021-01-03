@@ -40,10 +40,17 @@
   </header>
 
   <!--<img src=./img/poly-world.gif>-->
-    <div id="rows">
-      <div id="column">
-      </div>
-      <div id="dialog"></div>
+    <div id="container">
+        <!--this will make the next and prev image slider-->
+        <div class="slider">
+          <div class="img-box">
+            <img src="./img/1.png" class="slider-img">
+          </div>
+    
+          <button class="btn" onclick="next(); prevDialog()" >Next</button>
+          <button class="btn" onclick="prev(); nextDialog()">Prev</button>
+        </div>
+        <div id="dialog"></div>
     </div>
 </body>
 <!------------- FOOTER ---------->
