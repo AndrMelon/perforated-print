@@ -53,9 +53,9 @@
 
  // RPG
 
- var dialogs = ['Hello, i was so bored that i ended making this shit so yeah i am bored, as you can see i am bored !'],  
- initial = 0;
- individual = dialogs[initial].split('');
+ var dialogs = ["Step 1: Go to the quizlet you want to print."],
+    initial = 0;
+    individual = dialogs[initial].split('');
 
 function createDiag ( dialog ) {
 
