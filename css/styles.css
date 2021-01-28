@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-image: url(./img/poly-world.gif);
+    background-image: url(/img/poly-world.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -44,12 +44,12 @@ button {
 }
 
 .container {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #dialog {
     margin: 10;
-    float: left
+    float: left;
 }  
 
 #container {
@@ -113,21 +113,6 @@ button {
   word-spacing: 3px;
   width: 400px;
 }
-
-
-
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-:root {
-	background: black;
-	font-size: 200%;
-}
-
 
 
 .vaporwave {
