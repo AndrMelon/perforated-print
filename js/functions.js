@@ -50,10 +50,10 @@ function setImg(){
 
 
  var dialogs = [" Step 1: Go to the quizlet you want to print.",
-  " Step 2: Go to the quizlet you want to print.",
-   " Step 3: Go to the quizlet you want to print.", 
-   " Step 4: Go to the quizlet you want to print.",
-   " Step 5: Go to the quizlet you want to print.", ],
+  " Step 2: Press circled button.",
+   " Step 3: Click 'Export'.", 
+   " Step 4: The export window will show up. Now select custom inputs for both Input the codes 222 on the left and 777 on the right.",
+   " Step 5: Click the “Copy text” button circled in red. Paste the text into the text box below.", ],
     initial = 0;
     individual = dialogs[initial].split('');
 
