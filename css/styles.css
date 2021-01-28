@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    background: none;
   }
 
 button {
@@ -111,4 +112,24 @@ button {
   text-transform: uppercase;
   word-spacing: 3px;
   width: 400px;
+}
+
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	background: black;
+	font-size: 200%;
+}
+
+
+
+.vaporwave {
+	text-shadow: -.0625rem -.0625rem 0 #6BFFFF, .0625rem .0625rem 0 #FF819E;
 }
